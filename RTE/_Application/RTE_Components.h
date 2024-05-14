@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'STM32_Libs' 
- * Target:  'Target 1' 
+ * Target:  'Application' 
  */
 
 #ifndef RTE_COMPONENTS_H
