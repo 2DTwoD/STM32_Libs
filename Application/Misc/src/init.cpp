@@ -1,6 +1,6 @@
 #include "init.h"
 
-extern CommonDelay delay;
+extern CommonTimer delay;
 extern volatile uint16_t adcValues[];
 
 void commonInit(){

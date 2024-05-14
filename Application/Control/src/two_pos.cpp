@@ -64,8 +64,8 @@ TwoPosGist& TwoPosGist::operator=(float value){
 
 //TwoPosTim
 TwoPosTim::TwoPosTim(float sp, uint16_t lowTime, uint16_t highTime, bool reverse): TwoPosCommon(sp, reverse){
-	lowTimer = new CommonDelay(lowTime);
-	highTimer = new CommonDelay(highTime);
+	lowTimer = new CommonTimer(lowTime);
+	highTimer = new CommonTimer(highTime);
 }
 TwoPosTim::~TwoPosTim(){
 	delete lowTimer;

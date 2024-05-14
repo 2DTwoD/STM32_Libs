@@ -464,6 +464,11 @@
               <FileType>8</FileType>
               <FilePath>.\Tasks\Src\pidTask.cpp</FilePath>
             </File>
+            <File>
+              <FileName>all_tasks.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Tasks\Inc\all_tasks.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -559,20 +564,30 @@
               <FileType>5</FileType>
               <FilePath>.\Application\Discrete\inc\simple_input.h</FilePath>
             </File>
+            <File>
+              <FileName>switch_delay.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Discrete\src\switch_delay.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>switch_delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Discrete\inc\switch_delay.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Timer</GroupName>
           <Files>
             <File>
-              <FileName>custom_timer.cpp</FileName>
+              <FileName>common_timer.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Timer\src\custom_timer.cpp</FilePath>
+              <FilePath>.\Application\Timer\src\common_timer.cpp</FilePath>
             </File>
             <File>
-              <FileName>custom_timer.h</FileName>
+              <FileName>common_timer.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Application\Timer\inc\custom_timer.h</FilePath>
+              <FilePath>.\Application\Timer\inc\common_timer.h</FilePath>
             </File>
           </Files>
         </Group>

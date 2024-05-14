@@ -3,14 +3,14 @@
 #include "stdint.h"
 #include "interfaces.h"
 
-class CommonDelay: public IUpdated1ms {
+class CommonTimer: public IUpdated1ms {
 	protected:
 		uint16_t period;
 		uint16_t curTime;
 		bool go;
 		bool impulse;
 	public:
-		CommonDelay(uint16_t period);
+		CommonTimer(uint16_t period);
 		void update1ms() override;
 		uint16_t getPeriod();
 		void setPeriod(uint16_t value);
@@ -23,7 +23,7 @@ class CommonDelay: public IUpdated1ms {
 		void prepareAndStart();
 		void finish();
 		void setStart(bool value);
-		CommonDelay& operator=(bool value);
+		CommonTimer& operator=(bool value);
 		virtual bool started();
 	  bool notStarted();
 		bool finished();
@@ -31,14 +31,6 @@ class CommonDelay: public IUpdated1ms {
 		bool finishedImpulse();
 		bool inWork();
 		bool isFree();
-};
-
-class DIDelay: public CommonDelay{
-	private:
-		ISwitch *swtch;
-	public:
-		DIDelay(ISwitch *swtch, uint16_t period);
-		bool started() override;
 };
 
 #endif //CUSTOM_TIMER_H

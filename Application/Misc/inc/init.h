@@ -2,7 +2,7 @@
 #define INIT_H
 #include "stm32f10x.h"
 #include "common.h"
-#include "custom_timer.h"
+#include "common_timer.h"
 
 void commonInit();
 void rccInit();

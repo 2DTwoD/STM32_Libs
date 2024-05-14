@@ -1,13 +1,13 @@
 #include "main.h"
 
 Coil led(GPIOC, 13);
-SimpleInput button(GPIOA, 0);
+SimpleInputDelayed button(GPIOA, 0, 200);
 
 ProgrammCoil ledSwitch;
 
-DIDelay ledDelay(&ledSwitch, 500);
-DIDelay buttonDelay(&button, 10);
-CommonDelay delay(10);
+SwitchDelay ledDelay(&ledSwitch, 500);
+SwitchDelay buttonDelay(&button, 10);
+CommonTimer delay(10);
 
 volatile uint16_t adcValues[2] = {0, 0};
 AnalogMonitor adcMonitor(12, 0, 100);
@@ -32,7 +32,8 @@ IUpdated1ms *updateObjects[] = {
 	&analogOut,
 	&ramp,
 	&twoPos, 
-	&threePosReg
+	&threePosReg,
+	&button
 };
 
 uint8_t allTimersSize = sizeof(updateObjects) / sizeof(*updateObjects);
@@ -40,10 +41,10 @@ uint8_t allTimersSize = sizeof(updateObjects) / sizeof(*updateObjects);
 
 int main(void)
 {
-	/*mux.reg(3, pid.getOutRef(), &var2, &var3);
+	mux.reg(3, pid.getOutRef(), &var2, &var3);
 	mux.reg(&var4, 3);
 	mux.set(3);
-	float v = mux.get();*/
+	float v = mux.get();
 	adcMonitor.setTresDelay(LL, 5000);
 	rccInit();
 	tickInit();

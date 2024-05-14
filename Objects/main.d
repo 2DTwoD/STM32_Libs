@@ -19,7 +19,7 @@
   FreeRTOS\Inc\portable.h FreeRTOS\Inc\deprecated_definitions.h \
   FreeRTOS\ARM_CM3\portmacro.h FreeRTOS\Inc\mpu_wrappers.h \
   FreeRTOS\Inc\task.h FreeRTOS\Inc\list.h Application\Misc\inc\common.h \
-  Application\Misc\inc\init.h Application\Timer\inc\custom_timer.h \
+  Application\Misc\inc\init.h Application\Timer\inc\common_timer.h \
   Application\Misc\inc\interfaces.h Tasks\Inc\all_tasks.h \
   Application\Discrete\inc\coil.h Application\Discrete\inc\gpio_common.h \
   Application\Discrete\inc\simple_input.h \
@@ -34,4 +34,5 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   Application\Control\inc\two_pos.h Application\Control\inc\three_pos.h \
   Application\Control\inc\mux.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  Application\Discrete\inc\switch_delay.h

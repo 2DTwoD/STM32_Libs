@@ -9,7 +9,7 @@
 #include "init.h"
 #include "all_tasks.h"
 #include "coil.h"
-#include "custom_timer.h"
+#include "common_timer.h"
 #include "simple_input.h"
 #include "analog_monitor.h"
 #include "analog_out.h"
@@ -19,6 +19,7 @@
 #include "two_pos.h"
 #include "three_pos.h"
 #include "mux.h"
+#include "switch_delay.h"
 
 extern "C"{
 	void vApplicationIdleHook ( void ){

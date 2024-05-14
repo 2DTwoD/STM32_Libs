@@ -3,7 +3,7 @@
 
 #include "stdint.h"
 #include "interfaces.h"
-#include "custom_timer.h"
+#include "common_timer.h"
 #include "common.h"
 
 enum TRES_TYPE {
@@ -18,7 +18,7 @@ class Monitor: public IUpdated1ms{
 		float in;
 		float inLimits[2]{0.0f, 100.0f};
 		float tresholds[4]{5.0f, 10.0f, 90.0f, 95.0f};
-		CommonDelay* tresDelays[4];
+		CommonTimer* tresDelays[4];
 		void setValueMax(float limit);
 		void setValueMin(float limit);
 	public:

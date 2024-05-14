@@ -5,7 +5,7 @@
 
 #include "common.h"
 #include "interfaces.h"
-#include "custom_timer.h"
+#include "common_timer.h"
 
 class TwoPosCommon{
 	protected:
@@ -42,8 +42,8 @@ class TwoPosGist: public TwoPosCommon, public IUpdatedSomewhere{
 
 class TwoPosTim: public TwoPosCommon, public IUpdated1ms{
 	private:
-		CommonDelay *lowTimer = nullptr;
-		CommonDelay *highTimer = nullptr;
+		CommonTimer *lowTimer = nullptr;
+		CommonTimer *highTimer = nullptr;
 	public:
 		TwoPosTim(float sp = 50.0f, uint16_t lowTime = 0, uint16_t highTim = 0, bool reverse = false);
 	  ~TwoPosTim();

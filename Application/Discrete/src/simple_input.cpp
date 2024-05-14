@@ -1,6 +1,6 @@
 #include "simple_input.h"
-
-SimpleInput::SimpleInput(GPIO_TypeDef * gpio, uint8_t pin): GPIOcommon(gpio, pin){
+//SimpleInput
+SimpleInput::SimpleInput(GPIO_TypeDef *gpio, uint8_t pin): GPIOcommon(gpio, pin){
 	uint8_t shift = 4 * pin;
 	if(pin < 8){
 		setRegister(&gpio->CRL, 0xF << shift, 0x8 << shift);
@@ -13,4 +13,15 @@ SimpleInput::SimpleInput(GPIO_TypeDef * gpio, uint8_t pin): GPIOcommon(gpio, pin
 
 bool SimpleInput::isActive(){
 	return (gpio->IDR & (1 << pin)) == 0;
+}
+
+//SimpleInputDelayed
+SimpleInputDelayed::SimpleInputDelayed(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): SimpleInput(gpio, pin), CommonTimer(delay){
+}
+void SimpleInputDelayed::update1ms(){
+	setStart(isActive());
+	CommonTimer::update1ms();
+}
+bool SimpleInputDelayed::isActive(){
+	return finished();
 }

@@ -1,7 +1,7 @@
 #include "three_pos.h"
 ThreePosReg::ThreePosReg(float sp, float zeroGist, float pulseGist, uint16_t pauseTime, uint16_t pulseTime, bool reverse): sp(sp), zeroGist(zeroGist), reverse(reverse){
-		pauseTimer = new CommonDelay(pauseTime);
-		pulseTimer = new CommonDelay(pulseTime);
+		pauseTimer = new CommonTimer(pauseTime);
+		pulseTimer = new CommonTimer(pulseTime);
 		setPulseGist(pulseGist);
 }
 ThreePosReg::~ThreePosReg(){

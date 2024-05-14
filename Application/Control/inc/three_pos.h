@@ -5,7 +5,7 @@
 
 #include "common.h"
 #include "interfaces.h"
-#include "custom_timer.h"
+#include "common_timer.h"
 
 class ThreePosReg: public IUpdated1ms{
 	private:
@@ -13,8 +13,8 @@ class ThreePosReg: public IUpdated1ms{
 		float sp;
 		float zeroGist;
 		float pulseGist;
-		CommonDelay *pauseTimer = nullptr;
-		CommonDelay *pulseTimer = nullptr;
+		CommonTimer *pauseTimer = nullptr;
+		CommonTimer *pulseTimer = nullptr;
 		uint8_t out1Mode;
 		uint8_t out2Mode;
 		bool reverse;

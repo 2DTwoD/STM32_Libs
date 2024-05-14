@@ -3,10 +3,10 @@
 Monitor::Monitor(float valueMin, float valueMax){
 	inLimits[0] = valueMin;
 	setValueMax(valueMax);
-	tresDelays[0] = new CommonDelay(200);
-	tresDelays[1] = new CommonDelay(200);
-	tresDelays[2] = new CommonDelay(200);
-	tresDelays[3] = new CommonDelay(200);
+	tresDelays[0] = new CommonTimer(200);
+	tresDelays[1] = new CommonTimer(200);
+	tresDelays[2] = new CommonTimer(200);
+	tresDelays[3] = new CommonTimer(200);
 }
 Monitor::~Monitor(){
 	for(int i = 0; i < 4; i++){

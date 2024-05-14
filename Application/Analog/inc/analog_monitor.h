@@ -3,7 +3,7 @@
 
 #include "stdint.h"
 #include "interfaces.h"
-#include "custom_timer.h"
+#include "common_timer.h"
 #include "monitor.h"
 #include "common.h"
 #include "scale.h"

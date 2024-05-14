@@ -21,7 +21,7 @@
   C:\Users\VNT\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h \
   Application\Misc\inc\interfaces.h \
   Application\Discrete\inc\gpio_common.h Application\Misc\inc\common.h \
-  Application\Timer\inc\custom_timer.h \
+  Application\Timer\inc\common_timer.h \
   Application\Discrete\inc\simple_input.h \
   Application\Analog\inc\analog_monitor.h \
   Application\Observe\inc\monitor.h Application\Misc\inc\scale.h \
@@ -34,4 +34,5 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   Application\Control\inc\two_pos.h Application\Control\inc\three_pos.h \
   Application\Control\inc\mux.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
+  Application\Discrete\inc\switch_delay.h

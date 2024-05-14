@@ -1,8 +1,8 @@
 #include "all_tasks.h"
 
 extern Coil led;
-extern DIDelay ledDelay;
-extern DIDelay buttonDelay;
+extern SwitchDelay ledDelay;
+extern SwitchDelay buttonDelay;
 extern ProgrammCoil ledSwitch;
 //extern AnalogMonitor adcMonitor;
 extern AnalogOut analogOut;
