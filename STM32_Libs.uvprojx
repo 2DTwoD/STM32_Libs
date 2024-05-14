@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>Application</TargetName>
+      <TargetName>App</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>6180000::V6.18::ARMCLANG</pCCUsed>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Application\Inc;.\FreeRTOS\Inc;.\FreeRTOS\ARM_CM3;.\Tasks\Inc</IncludePath>
+              <IncludePath>.\Application\Analog\inc;.\FreeRTOS\Inc;.\FreeRTOS\ARM_CM3;.\Tasks\Inc;.\Application\Control\inc;.\Application\Discrete\inc;.\Application\Main\inc;.\Application\Misc\inc;.\Application\Observe\inc;.\Application\Timer\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -387,7 +387,12 @@
             <File>
               <FileName>main.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\main.cpp</FilePath>
+              <FilePath>.\Application\Main\src\main.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>main.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Main\inc\main.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -467,12 +472,32 @@
             <File>
               <FileName>common.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\common.cpp</FilePath>
+              <FilePath>.\Application\Misc\src\common.cpp</FilePath>
             </File>
             <File>
               <FileName>init.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\init.cpp</FilePath>
+              <FilePath>.\Application\Misc\src\init.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>common.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Misc\inc\common.h</FilePath>
+            </File>
+            <File>
+              <FileName>init.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Misc\inc\init.h</FilePath>
+            </File>
+            <File>
+              <FileName>interfaces.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Misc\inc\interfaces.h</FilePath>
+            </File>
+            <File>
+              <FileName>scale.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Misc\inc\scale.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -482,12 +507,22 @@
             <File>
               <FileName>analog_monitor.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\analog_monitor.cpp</FilePath>
+              <FilePath>.\Application\Analog\src\analog_monitor.cpp</FilePath>
             </File>
             <File>
               <FileName>analog_out.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\analog_out.cpp</FilePath>
+              <FilePath>.\Application\Analog\src\analog_out.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>analog_monitor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Analog\inc\analog_monitor.h</FilePath>
+            </File>
+            <File>
+              <FileName>analog_out.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Analog\inc\analog_out.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -497,17 +532,32 @@
             <File>
               <FileName>coil.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\coil.cpp</FilePath>
+              <FilePath>.\Application\Discrete\src\coil.cpp</FilePath>
             </File>
             <File>
               <FileName>gpio_common.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\gpio_common.cpp</FilePath>
+              <FilePath>.\Application\Discrete\src\gpio_common.cpp</FilePath>
             </File>
             <File>
               <FileName>simple_input.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\simple_input.cpp</FilePath>
+              <FilePath>.\Application\Discrete\src\simple_input.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>coil.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Discrete\inc\coil.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_common.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Discrete\inc\gpio_common.h</FilePath>
+            </File>
+            <File>
+              <FileName>simple_input.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Discrete\inc\simple_input.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -517,7 +567,12 @@
             <File>
               <FileName>custom_timer.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\custom_timer.cpp</FilePath>
+              <FilePath>.\Application\Timer\src\custom_timer.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>custom_timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Timer\inc\custom_timer.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -527,22 +582,47 @@
             <File>
               <FileName>pid.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\pid.cpp</FilePath>
+              <FilePath>.\Application\Control\src\pid.cpp</FilePath>
             </File>
             <File>
               <FileName>ramp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\ramp.cpp</FilePath>
+              <FilePath>.\Application\Control\src\ramp.cpp</FilePath>
             </File>
             <File>
               <FileName>three_pos.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\three_pos.cpp</FilePath>
+              <FilePath>.\Application\Control\src\three_pos.cpp</FilePath>
             </File>
             <File>
               <FileName>two_pos.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\two_pos.cpp</FilePath>
+              <FilePath>.\Application\Control\src\two_pos.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>mux.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Control\inc\mux.h</FilePath>
+            </File>
+            <File>
+              <FileName>pid.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Control\inc\pid.h</FilePath>
+            </File>
+            <File>
+              <FileName>ramp.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Control\inc\ramp.h</FilePath>
+            </File>
+            <File>
+              <FileName>three_pos.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Control\inc\three_pos.h</FilePath>
+            </File>
+            <File>
+              <FileName>two_pos.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Control\inc\two_pos.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -552,12 +632,22 @@
             <File>
               <FileName>monitor.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\monitor.cpp</FilePath>
+              <FilePath>.\Application\Observe\src\monitor.cpp</FilePath>
             </File>
             <File>
               <FileName>moving_avg.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Application\Src\moving_avg.cpp</FilePath>
+              <FilePath>.\Application\Observe\src\moving_avg.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>monitor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Observe\inc\monitor.h</FilePath>
+            </File>
+            <File>
+              <FileName>moving_avg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Observe\inc\moving_avg.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -577,13 +667,13 @@
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="6.0.0" condition="ARMv6_7_8-M Device">
         <package name="CMSIS" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="ARM" version="6.0.0"/>
         <targetInfos>
-          <targetInfo name="Application"/>
+          <targetInfo name="App"/>
         </targetInfos>
       </component>
       <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS">
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
-          <targetInfo name="Application"/>
+          <targetInfo name="App"/>
         </targetInfos>
       </component>
     </components>
@@ -593,7 +683,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
-          <targetInfo name="Application"/>
+          <targetInfo name="App"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" condition="STM32F1xx MD ARMCC" name="Device\Source\ARM\startup_stm32f10x_md.s" version="0.0.0">
@@ -601,7 +691,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
-          <targetInfo name="Application"/>
+          <targetInfo name="App"/>
         </targetInfos>
       </file>
       <file attr="config" category="source" name="Device\Source\system_stm32f10x.c" version="0.0.0">
@@ -609,7 +699,7 @@
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
         <targetInfos>
-          <targetInfo name="Application"/>
+          <targetInfo name="App"/>
         </targetInfos>
       </file>
     </files>

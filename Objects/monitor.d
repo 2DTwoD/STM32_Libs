@@ -1,7 +1,7 @@
-./objects/monitor.o: Application\Src\monitor.cpp \
-  Application\Inc\monitor.h \
+./objects/monitor.o: Application\Observe\src\monitor.cpp \
+  Application\Observe\inc\monitor.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  Application\Inc\interfaces.h Application\Inc\custom_timer.h \
-  Application\Inc\common.h
+  Application\Misc\inc\interfaces.h Application\Timer\inc\custom_timer.h \
+  Application\Misc\inc\common.h
