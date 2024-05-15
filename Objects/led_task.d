@@ -35,4 +35,6 @@
   Application\Control\inc\two_pos.h Application\Control\inc\three_pos.h \
   Application\Control\inc\mux.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  Application\Discrete\inc\switch_delay.h
+  Application\Discrete\inc\switch_delay.h \
+  Application\Timer\inc\on_delay.h Application\Timer\inc\off_delay.h \
+  Application\Timer\inc\pulse.h Application\Discrete\inc\rf_impulse.h

@@ -574,6 +574,16 @@
               <FileType>5</FileType>
               <FilePath>.\Application\Discrete\inc\switch_delay.h</FilePath>
             </File>
+            <File>
+              <FileName>rf_impulse.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Discrete\src\rf_impulse.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>rf_impulse.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Discrete\inc\rf_impulse.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -588,6 +598,36 @@
               <FileName>common_timer.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Timer\inc\common_timer.h</FilePath>
+            </File>
+            <File>
+              <FileName>on_delay.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Timer\src\on_delay.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>on_delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Timer\inc\on_delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>off_delay.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Timer\src\off_delay.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>off_delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Timer\inc\off_delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>pulse.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Timer\src\pulse.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>pulse.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Timer\inc\pulse.h</FilePath>
             </File>
           </Files>
         </Group>

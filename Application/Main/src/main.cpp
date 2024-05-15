@@ -23,6 +23,10 @@ float var2 = 2;
 float var3 = 3;
 float var4 = 4;
 Mux<float> mux(4);
+OnDelay onDelay(5000);
+OffDelay offDelay(5000);
+Pulse pulse(5000);
+
 
 IUpdated1ms *updateObjects[] = {
 	&ledDelay,
@@ -33,7 +37,10 @@ IUpdated1ms *updateObjects[] = {
 	&ramp,
 	&twoPos, 
 	&threePosReg,
-	&button
+	&button,
+	&onDelay,
+	&offDelay,
+	&pulse
 };
 
 uint8_t allTimersSize = sizeof(updateObjects) / sizeof(*updateObjects);

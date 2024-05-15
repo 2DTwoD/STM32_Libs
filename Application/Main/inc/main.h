@@ -20,6 +20,10 @@
 #include "three_pos.h"
 #include "mux.h"
 #include "switch_delay.h"
+#include "on_delay.h"
+#include "off_delay.h"
+#include "pulse.h"
+
 
 extern "C"{
 	void vApplicationIdleHook ( void ){

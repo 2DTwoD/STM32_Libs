@@ -17,6 +17,10 @@
 #include "three_pos.h"
 #include "mux.h"
 #include "switch_delay.h"
+#include "on_delay.h"
+#include "off_delay.h"
+#include "pulse.h"
+#include "rf_impulse.h"
 
 void ledTask(void *pvParameters);
 void pidTask(void *pvParameters);
