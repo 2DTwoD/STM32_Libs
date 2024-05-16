@@ -6,22 +6,17 @@
 #include "task.h"
 
 #include "coil.h"
-#include "common_timer.h"
 #include "simple_input.h"
-#include "analog_monitor.h"
-#include "analog_out.h"
+#include "counter.h"
 #include "pid.h"
+#include "analog_monitor.h"
 #include "scale.h"
 #include "moving_avg.h"
-#include "two_pos.h"
-#include "three_pos.h"
-#include "mux.h"
-#include "switch_delay.h"
-#include "on_delay.h"
-#include "off_delay.h"
+#include "ramp.h"
 #include "pulse.h"
+#include "analog_out.h"
 #include "rf_impulse.h"
-#include "counter.h"
+#include "sequence.h"
 
 void ledTask(void *pvParameters);
 void pidTask(void *pvParameters);

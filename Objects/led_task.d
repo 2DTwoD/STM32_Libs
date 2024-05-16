@@ -23,19 +23,15 @@
   Application\Discrete\inc\gpio_common.h Application\Misc\inc\common.h \
   Application\Timer\inc\common_timer.h \
   Application\Discrete\inc\simple_input.h \
+  Application\Observe\inc\counter.h \
+  Application\Discrete\inc\rf_impulse.h Application\Control\inc\pid.h \
   Application\Analog\inc\analog_monitor.h \
   Application\Observe\inc\monitor.h Application\Misc\inc\scale.h \
-  Application\Analog\inc\analog_out.h Application\Control\inc\ramp.h \
-  Application\Control\inc\pid.h Application\Observe\inc\moving_avg.h \
+  Application\Observe\inc\moving_avg.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstring \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Application\Control\inc\two_pos.h Application\Control\inc\three_pos.h \
-  Application\Control\inc\mux.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
-  Application\Discrete\inc\switch_delay.h \
-  Application\Timer\inc\on_delay.h Application\Timer\inc\off_delay.h \
-  Application\Timer\inc\pulse.h Application\Discrete\inc\rf_impulse.h \
-  Application\Observe\inc\counter.h
+  Application\Control\inc\ramp.h Application\Timer\inc\pulse.h \
+  Application\Analog\inc\analog_out.h Application\Control\inc\sequence.h

@@ -29,6 +29,7 @@
 ".\objects\ramp.o"
 ".\objects\three_pos.o"
 ".\objects\two_pos.o"
+".\objects\sequence.o"
 ".\objects\monitor.o"
 ".\objects\moving_avg.o"
 ".\objects\counter.o"

@@ -18,9 +18,9 @@
   FreeRTOS\Inc\FreeRTOSConfig.h FreeRTOS\Inc\projdefs.h \
   FreeRTOS\Inc\portable.h FreeRTOS\Inc\deprecated_definitions.h \
   FreeRTOS\ARM_CM3\portmacro.h FreeRTOS\Inc\mpu_wrappers.h \
-  FreeRTOS\Inc\task.h FreeRTOS\Inc\list.h Application\Misc\inc\common.h \
-  Application\Misc\inc\init.h Application\Timer\inc\common_timer.h \
-  Application\Misc\inc\interfaces.h Tasks\Inc\all_tasks.h \
+  FreeRTOS\Inc\task.h FreeRTOS\Inc\list.h Application\Misc\inc\init.h \
+  Application\Misc\inc\common.h Application\Timer\inc\common_timer.h \
+  Application\Misc\inc\interfaces.h Application\Main\inc\global_vars.h \
   Application\Discrete\inc\coil.h Application\Discrete\inc\gpio_common.h \
   Application\Discrete\inc\simple_input.h \
   Application\Analog\inc\analog_monitor.h \
@@ -37,5 +37,6 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   Application\Discrete\inc\switch_delay.h \
   Application\Timer\inc\on_delay.h Application\Timer\inc\off_delay.h \
-  Application\Timer\inc\pulse.h Application\Discrete\inc\rf_impulse.h \
-  Application\Observe\inc\counter.h
+  Application\Timer\inc\pulse.h Application\Observe\inc\counter.h \
+  Application\Discrete\inc\rf_impulse.h Tasks\Inc\all_tasks.h \
+  Application\Control\inc\sequence.h

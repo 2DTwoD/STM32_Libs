@@ -394,6 +394,11 @@
               <FileType>5</FileType>
               <FilePath>.\Application\Main\inc\main.h</FilePath>
             </File>
+            <File>
+              <FileName>global_vars.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Main\inc\global_vars.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -679,6 +684,16 @@
               <FileType>5</FileType>
               <FilePath>.\Application\Control\inc\mux.h</FilePath>
             </File>
+            <File>
+              <FileName>sequence.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Control\src\sequence.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>sequence.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Control\inc\sequence.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -743,7 +758,7 @@
       </component>
     </components>
     <files>
-      <file attr="config" category="header" name="RTE_Driver\Config\RTE_Device.h" version="0.0.0">
+      <file attr="config" category="header" name="RTE_Driver\Config\RTE_Device.h" version="1.1.2">
         <instance index="0">RTE\Device\STM32F103C8\RTE_Device.h</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
@@ -751,7 +766,7 @@
           <targetInfo name="App"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" condition="STM32F1xx MD ARMCC" name="Device\Source\ARM\startup_stm32f10x_md.s" version="0.0.0">
+      <file attr="config" category="source" condition="STM32F1xx MD ARMCC" name="Device\Source\ARM\startup_stm32f10x_md.s" version="1.0.1">
         <instance index="0">RTE\Device\STM32F103C8\startup_stm32f10x_md.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>
@@ -759,7 +774,7 @@
           <targetInfo name="App"/>
         </targetInfos>
       </file>
-      <file attr="config" category="source" name="Device\Source\system_stm32f10x.c" version="0.0.0">
+      <file attr="config" category="source" name="Device\Source\system_stm32f10x.c" version="1.0.1">
         <instance index="0">RTE\Device\STM32F103C8\system_stm32f10x.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F1xx CMSIS"/>
         <package name="STM32F1xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.4.1"/>

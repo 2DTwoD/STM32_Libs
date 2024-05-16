@@ -25,3 +25,7 @@ Counter& Counter::operator-=(bool value){
 	sub(value);
 	return *this;
 }
+
+uint32_t* Counter::getOutRef(){
+	return &out; 
+}

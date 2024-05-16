@@ -15,6 +15,7 @@ class Counter: private RFimpulse{
 		uint32_t get();
 		Counter& operator+=(bool value);
 		Counter& operator-=(bool value);
+		uint32_t* getOutRef();
 };
 
 #endif //COUNTER_H

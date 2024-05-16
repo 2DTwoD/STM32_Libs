@@ -1,20 +1,20 @@
 #include "all_tasks.h"
 
+extern volatile uint16_t adcValues[];
 extern AnalogMonitor adcMonitor;
 extern Scale<float, int16_t> scale;
-extern volatile uint16_t adcValues[];
-extern Ramp ramp;
-extern AnalogOut analogOut;
 extern MovAvg avg;
-extern TwoPosTim twoPos;
-extern ThreePosReg threePosReg;
-extern OnDelay onDelay;
-extern OffDelay offDelay;
+extern Ramp ramp;
 extern Pulse pulse;
+extern AnalogOut analogOut;
+RFimpulse rise(FALL);
+Sequence seq;
 bool strt;
 bool rest;
 bool reslt;
-RFimpulse rise(FALL);
+bool seq_start;
+bool seq_lock;
+bool seq_finish;
 
 void testTask(void *pvParameters){
 	int16_t tmp;
@@ -29,8 +29,6 @@ void testTask(void *pvParameters){
 		
 		analogOut = avg.get();
 		
-		twoPos = avg.get();
-		
 		pulse = strt;
 		rise = rest;
 		if(rise.get()){
@@ -38,6 +36,12 @@ void testTask(void *pvParameters){
 		}
 		reslt = pulse.get();
 		//threePosReg = avg.get();
+		seq.start(seq_start);
+		seq.lock(seq_lock);
+		seq.finish(seq_finish);
+		if(seq.finishedImpulse()){
+			int tmp = 0;
+		}
 		vTaskDelay(1);
 	}
 }
