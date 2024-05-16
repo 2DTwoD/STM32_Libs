@@ -2,6 +2,12 @@
 #define COMMON_H
 #include "stdint.h"
 
+enum IMPULSE {
+	RISE = 0,
+	FALL,
+	RISE_FALL
+};
+
 void badTimeOut(uint32_t);
 
 int8_t getPosition(volatile uint32_t mask);

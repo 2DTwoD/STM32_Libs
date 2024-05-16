@@ -37,4 +37,5 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   Application\Discrete\inc\switch_delay.h \
   Application\Timer\inc\on_delay.h Application\Timer\inc\off_delay.h \
-  Application\Timer\inc\pulse.h Application\Discrete\inc\rf_impulse.h
+  Application\Timer\inc\pulse.h Application\Discrete\inc\rf_impulse.h \
+  Application\Observe\inc\counter.h

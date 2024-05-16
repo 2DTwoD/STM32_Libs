@@ -7,7 +7,7 @@ MovAvg::MovAvg(uint8_t size){
 	pos = 0;
 }
 MovAvg::~MovAvg(){
-	delete row;
+	delete[] row;
 }
 void MovAvg::set(float value){
 	in = value;

@@ -1,10 +1,7 @@
 #ifndef RF_IMPULSE_H
 #define RF_IMPULSE_H
 
-enum IMPULSE {
-	RISE = 0,
-	FALL
-};
+#include "common.h"
 
 class RFimpulse{
 	private:

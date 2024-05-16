@@ -18,7 +18,7 @@ class Mux{
 			inArray = new T*[capacity];
 		}
 		~Mux(){
-			delete inArray;
+			delete[] inArray;
 		}
 		T get(){
 			return *inArray[channel];

@@ -6,7 +6,7 @@
 #include "common.h"
 
 template<typename T, typename R>
-class Scale{
+class Scale: public IUpdatedSomewhere{
 	private:
 		T in;
 		T minIn;
@@ -19,12 +19,12 @@ class Scale{
 		}
 		void set(T value){
 			in = limit(value, minIn, maxIn);
-			update();
+			updateSomewhere();
 		}
 		R get(){
 			return out;
 		}
-		void update(){
+		void updateSomewhere() override{
 			out = (maxOut - minOut) * (in - minIn) / (maxIn - minIn) + minOut;
 		}
 		Scale<T, R>& operator=(T value){

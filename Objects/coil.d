@@ -12,4 +12,5 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   C:\Users\VNT\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h \
   Application\Misc\inc\interfaces.h \
-  Application\Discrete\inc\gpio_common.h Application\Misc\inc\common.h
+  Application\Discrete\inc\gpio_common.h Application\Misc\inc\common.h \
+  Application\Timer\inc\common_timer.h

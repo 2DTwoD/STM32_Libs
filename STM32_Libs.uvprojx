@@ -480,14 +480,14 @@
               <FilePath>.\Application\Misc\src\common.cpp</FilePath>
             </File>
             <File>
-              <FileName>init.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Application\Misc\src\init.cpp</FilePath>
-            </File>
-            <File>
               <FileName>common.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Misc\inc\common.h</FilePath>
+            </File>
+            <File>
+              <FileName>init.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Misc\src\init.cpp</FilePath>
             </File>
             <File>
               <FileName>init.h</FileName>
@@ -515,14 +515,14 @@
               <FilePath>.\Application\Analog\src\analog_monitor.cpp</FilePath>
             </File>
             <File>
-              <FileName>analog_out.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Application\Analog\src\analog_out.cpp</FilePath>
-            </File>
-            <File>
               <FileName>analog_monitor.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Analog\inc\analog_monitor.h</FilePath>
+            </File>
+            <File>
+              <FileName>analog_out.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Analog\src\analog_out.cpp</FilePath>
             </File>
             <File>
               <FileName>analog_out.h</FileName>
@@ -540,24 +540,24 @@
               <FilePath>.\Application\Discrete\src\coil.cpp</FilePath>
             </File>
             <File>
-              <FileName>gpio_common.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Application\Discrete\src\gpio_common.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>simple_input.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Application\Discrete\src\simple_input.cpp</FilePath>
-            </File>
-            <File>
               <FileName>coil.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Discrete\inc\coil.h</FilePath>
             </File>
             <File>
+              <FileName>gpio_common.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Discrete\src\gpio_common.cpp</FilePath>
+            </File>
+            <File>
               <FileName>gpio_common.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Discrete\inc\gpio_common.h</FilePath>
+            </File>
+            <File>
+              <FileName>simple_input.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Discrete\src\simple_input.cpp</FilePath>
             </File>
             <File>
               <FileName>simple_input.h</FileName>
@@ -640,29 +640,14 @@
               <FilePath>.\Application\Control\src\pid.cpp</FilePath>
             </File>
             <File>
-              <FileName>ramp.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Application\Control\src\ramp.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>three_pos.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Application\Control\src\three_pos.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>two_pos.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Application\Control\src\two_pos.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>mux.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Application\Control\inc\mux.h</FilePath>
-            </File>
-            <File>
               <FileName>pid.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Control\inc\pid.h</FilePath>
+            </File>
+            <File>
+              <FileName>ramp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Control\src\ramp.cpp</FilePath>
             </File>
             <File>
               <FileName>ramp.h</FileName>
@@ -670,14 +655,29 @@
               <FilePath>.\Application\Control\inc\ramp.h</FilePath>
             </File>
             <File>
+              <FileName>three_pos.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Control\src\three_pos.cpp</FilePath>
+            </File>
+            <File>
               <FileName>three_pos.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Control\inc\three_pos.h</FilePath>
             </File>
             <File>
+              <FileName>two_pos.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Control\src\two_pos.cpp</FilePath>
+            </File>
+            <File>
               <FileName>two_pos.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Control\inc\two_pos.h</FilePath>
+            </File>
+            <File>
+              <FileName>mux.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Control\inc\mux.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -690,19 +690,29 @@
               <FilePath>.\Application\Observe\src\monitor.cpp</FilePath>
             </File>
             <File>
-              <FileName>moving_avg.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Application\Observe\src\moving_avg.cpp</FilePath>
-            </File>
-            <File>
               <FileName>monitor.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Observe\inc\monitor.h</FilePath>
             </File>
             <File>
+              <FileName>moving_avg.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Observe\src\moving_avg.cpp</FilePath>
+            </File>
+            <File>
               <FileName>moving_avg.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Observe\inc\moving_avg.h</FilePath>
+            </File>
+            <File>
+              <FileName>counter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Observe\src\counter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>counter.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Observe\inc\counter.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -21,6 +21,7 @@
 #include "off_delay.h"
 #include "pulse.h"
 #include "rf_impulse.h"
+#include "counter.h"
 
 void ledTask(void *pvParameters);
 void pidTask(void *pvParameters);

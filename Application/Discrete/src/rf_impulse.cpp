@@ -10,10 +10,15 @@ void RFimpulse::set(bool value){
 				out = true;
 			} 
 			break;
-		default:
+		case FALL:
 			if(!value && prev){
 				out = true;
 			}
+			break;
+		default:
+			if(value != prev){
+				out = true;
+			} 
 	}
 	prev = value;
 }

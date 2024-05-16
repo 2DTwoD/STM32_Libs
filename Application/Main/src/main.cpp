@@ -1,7 +1,7 @@
 #include "main.h"
 
 Coil led(GPIOC, 13);
-SimpleInputDelayed button(GPIOA, 0, 200);
+SimpleInputDelayed button(GPIOA, 0, 10);
 
 ProgrammCoil ledSwitch;
 
