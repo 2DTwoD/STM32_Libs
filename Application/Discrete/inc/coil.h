@@ -21,7 +21,7 @@ class ProgrammCoil: public ISwitch{
 
 class Coil: public GPIOcommon, public ProgrammCoil {
   public:
-		Coil(GPIO_TypeDef * gpio, uint8_t pin);
+		Coil(GPIO_TypeDef *gpio, uint8_t pin);
 	
 		bool isActive() override;
 	
@@ -32,7 +32,7 @@ class Coil: public GPIOcommon, public ProgrammCoil {
 
 class CoilDelayed: public Coil, public CommonTimer {
   public:
-		CoilDelayed(GPIO_TypeDef * gpio, uint8_t pin, uint16_t delay);
+		CoilDelayed(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay);
 	
 		void update1ms() override;
 			
@@ -41,5 +41,18 @@ class CoilDelayed: public Coil, public CommonTimer {
 		void setValue(bool value) override;
 	
 		CoilDelayed& operator=(bool value);
+};
+
+class CoilPulse: public Coil, public CommonTimer {
+  public:
+		CoilPulse(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay);
+	
+		void update1ms() override;
+			
+		bool isActive() override;
+	
+		void setValue(bool value) override;
+	
+		CoilPulse& operator=(bool value);
 };
 #endif //COIL_H

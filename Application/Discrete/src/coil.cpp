@@ -22,7 +22,7 @@ ProgrammCoil& ProgrammCoil::operator=(bool value){
 }
 
 //Coil
-Coil::Coil(GPIO_TypeDef * gpio, uint8_t pin): GPIOcommon(gpio, pin) {
+Coil::Coil(GPIO_TypeDef *gpio, uint8_t pin): GPIOcommon(gpio, pin) {
 	if(pin < 8){
 		setBitsInRegister(&gpio->CRL, 0x1111 << (4 * pin), 0b0001);
 	} else {
@@ -45,7 +45,7 @@ Coil& Coil::operator=(bool value){
 }
 
 //CoilDelayed
-CoilDelayed::CoilDelayed(GPIO_TypeDef * gpio, uint8_t pin, uint16_t delay): Coil(gpio, pin), CommonTimer(delay) {
+CoilDelayed::CoilDelayed(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): Coil(gpio, pin), CommonTimer(delay) {
 }
 void CoilDelayed::update1ms() {
 	CommonTimer::update1ms();
@@ -58,6 +58,24 @@ void CoilDelayed::setValue(bool value){
 	CommonTimer::setStart(value);
 }
 CoilDelayed& CoilDelayed::operator=(bool value){
+	setValue(value);
+	return *this;
+}
+
+//CoilPulse
+CoilPulse::CoilPulse(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): Coil(gpio, pin), CommonTimer(delay) {
+}
+void CoilPulse::update1ms() {
+	CommonTimer::update1ms();
+	Coil::setValue(CommonTimer::inWork());
+}
+bool CoilPulse::isActive(){
+	return Coil::isActive();
+}
+void CoilPulse::setValue(bool value){
+	CommonTimer::setStart(value);
+}
+CoilPulse& CoilPulse::operator=(bool value){
 	setValue(value);
 	return *this;
 }

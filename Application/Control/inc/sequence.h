@@ -7,8 +7,11 @@ class Sequence: private RFimpulse{
 		bool strt;
 		bool lck;
 		bool fin;
+		uint8_t seq_step;
+		uint8_t *cur_step_pointer;
+		bool isMyStep();
 	public:
-		Sequence();
+		Sequence(uint8_t *cur_step_pointer, uint8_t seq_step);
 		void reset();
 		void start(bool value);
 		void lock(bool value);
