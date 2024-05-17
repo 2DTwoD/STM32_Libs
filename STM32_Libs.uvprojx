@@ -385,6 +385,11 @@
           <GroupName>Application</GroupName>
           <Files>
             <File>
+              <FileName>global_vars.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Main\inc\global_vars.h</FilePath>
+            </File>
+            <File>
               <FileName>main.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Application\Main\src\main.cpp</FilePath>
@@ -394,16 +399,16 @@
               <FileType>5</FileType>
               <FilePath>.\Application\Main\inc\main.h</FilePath>
             </File>
-            <File>
-              <FileName>global_vars.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Application\Main\inc\global_vars.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>FreeRTOS</GroupName>
           <Files>
+            <File>
+              <FileName>FreeRTOSConfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\FreeRTOS\Inc\FreeRTOSConfig.h</FilePath>
+            </File>
             <File>
               <FileName>croutine.c</FileName>
               <FileType>1</FileType>
@@ -480,6 +485,16 @@
           <GroupName>Misc</GroupName>
           <Files>
             <File>
+              <FileName>interfaces.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Misc\inc\interfaces.h</FilePath>
+            </File>
+            <File>
+              <FileName>scale.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Misc\inc\scale.h</FilePath>
+            </File>
+            <File>
               <FileName>common.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Application\Misc\src\common.cpp</FilePath>
@@ -498,16 +513,6 @@
               <FileName>init.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Misc\inc\init.h</FilePath>
-            </File>
-            <File>
-              <FileName>interfaces.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Application\Misc\inc\interfaces.h</FilePath>
-            </File>
-            <File>
-              <FileName>scale.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Application\Misc\inc\scale.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -640,6 +645,11 @@
           <GroupName>Control</GroupName>
           <Files>
             <File>
+              <FileName>mux.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Control\inc\mux.h</FilePath>
+            </File>
+            <File>
               <FileName>pid.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Application\Control\src\pid.cpp</FilePath>
@@ -678,11 +688,6 @@
               <FileName>two_pos.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Application\Control\inc\two_pos.h</FilePath>
-            </File>
-            <File>
-              <FileName>mux.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Application\Control\inc\mux.h</FilePath>
             </File>
             <File>
               <FileName>sequence.cpp</FileName>

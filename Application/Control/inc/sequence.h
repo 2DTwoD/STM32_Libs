@@ -13,6 +13,7 @@ class Sequence: private RFimpulse{
 		void start(bool value);
 		void lock(bool value);
 		void finish(bool value);
+		void slfSet(bool strt, bool lck, bool fin);
 		bool started();
 		bool locked();
 		bool finished();

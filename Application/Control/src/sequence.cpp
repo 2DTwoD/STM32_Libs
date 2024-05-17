@@ -4,6 +4,7 @@ Sequence::Sequence(): RFimpulse(RISE){
 }
 void Sequence::reset(){
 	strt = false;
+	lck = false;
 	fin = false;
 	RFimpulse::set(false);
 }
@@ -21,7 +22,11 @@ void Sequence::finish(bool value){
 		RFimpulse::set(true);
 	}
 }
-
+void Sequence::slfSet(bool strt, bool lck, bool fin){
+	start(strt);
+	lock(lck);
+	finish(fin);
+}
 bool Sequence::started(){
 	return strt && !lck;
 }
