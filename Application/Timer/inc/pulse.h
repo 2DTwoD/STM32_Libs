@@ -8,7 +8,7 @@ class Pulse: public IUpdated1ms  {
 		bool startFlag;
 		CommonTimer *timer = nullptr;
 	public:
-		Pulse(uint16_t period);
+		Pulse(uint32_t period);
 		~Pulse();
 		void update1ms() override;
 		void set(bool value);

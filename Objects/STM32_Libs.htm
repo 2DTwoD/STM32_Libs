@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\STM32_Libs.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\STM32_Libs.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Fri May 17 13:45:43 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Mon May 20 10:52:59 2024
 <BR><P>
 <H3>Maximum Stack Usage =        256 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -121,7 +121,7 @@ Function Pointers
  <LI><a href="#[3c]">AnalogOut::~AnalogOut()</a> from analog_out.o(.text._ZN9AnalogOutD2Ev) referenced 2 times from main.o(.text.__cxx_global_var_init.4)
  <LI><a href="#[5c]">TwoPosTim::update1ms()</a> from two_pos.o(.text._ZN9TwoPosTim9update1msEv) referenced from two_pos.o(.rodata._ZTV9TwoPosTim)
  <LI><a href="#[3e]">TwoPosTim::~TwoPosTim()</a> from two_pos.o(.text._ZN9TwoPosTimD2Ev) referenced 2 times from main.o(.text.__cxx_global_var_init.9)
- <LI><a href="#[4f]">non-virtual thunk to SimpleInputDelayed::update1ms()</a> from simple_input.o(.text._ZThn12_N18SimpleInputDelayed9update1msEv) referenced from simple_input.o(.rodata._ZTV18SimpleInputDelayed)
+ <LI><a href="#[4f]">non-virtual thunk to SimpleInputDelayed::update1ms()</a> from simple_input.o(.text._ZThn16_N18SimpleInputDelayed9update1msEv) referenced from simple_input.o(.rodata._ZTV18SimpleInputDelayed)
  <LI><a href="#[47]">__cxa_pure_virtual</a> from cxa_virtual.cpp.o(.text.__cxa_pure_virtual) referenced from common_timer.o(.rodata._ZTV11IUpdated1ms)
  <LI><a href="#[47]">__cxa_pure_virtual</a> from cxa_virtual.cpp.o(.text.__cxa_pure_virtual) referenced from main.o(.rodata._ZTV17IUpdatedSomewhere)
  <LI><a href="#[47]">__cxa_pure_virtual</a> from cxa_virtual.cpp.o(.text.__cxa_pure_virtual) referenced from coil.o(.rodata._ZTV7ISwitch)
@@ -1125,22 +1125,22 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> common_timer.o(.rodata._ZTV11CommonTimer)
 </UL>
-<P><STRONG><a name="[e1]"></a>CommonTimer::CommonTimer(unsigned short)</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, common_timer.o(.text._ZN11CommonTimerC2Et))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = CommonTimer::CommonTimer(unsigned short) &rArr; IUpdated1ms::IUpdated1ms__sub_object()
+<P><STRONG><a name="[e1]"></a>CommonTimer::CommonTimer(unsigned int)</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, common_timer.o(.text._ZN11CommonTimerC2Ej))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = CommonTimer::CommonTimer(unsigned int) &rArr; IUpdated1ms::IUpdated1ms__sub_object()
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IUpdated1ms::IUpdated1ms__sub_object()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pulse::Pulse(unsigned short)
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OffDelay::OffDelay(unsigned short)
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnDelay::OnDelay(unsigned short)
+<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pulse::Pulse(unsigned int)
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OffDelay::OffDelay(unsigned int)
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnDelay::OnDelay(unsigned int)
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreePosReg::ThreePosReg(float, float, float, unsigned short, unsigned short, bool)
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TwoPosTim::TwoPosTim(float, unsigned short, unsigned short, bool)
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.2
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor::Monitor(float, float)
 </UL>
 
-<P><STRONG><a name="[f9]"></a>CommonTimer::CommonTimer__sub_object(unsigned short)</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, common_timer.o(.text._ZN11CommonTimerC2Et))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = CommonTimer::CommonTimer__sub_object(unsigned short)
+<P><STRONG><a name="[f9]"></a>CommonTimer::CommonTimer__sub_object(unsigned int)</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, common_timer.o(.text._ZN11CommonTimerC2Ej))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = CommonTimer::CommonTimer__sub_object(unsigned int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleInputDelayed::SimpleInputDelayed(GPIO_TypeDef*, unsigned char, unsigned short)
 </UL>
@@ -1157,30 +1157,30 @@ Global Symbols
 <P><STRONG><a name="[e2]"></a>IUpdated1ms::IUpdated1ms__sub_object()</STRONG> (Thumb, 22 bytes, Stack size 4 bytes, common_timer.o(.text._ZN11IUpdated1msC2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = IUpdated1ms::IUpdated1ms__sub_object()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pulse::Pulse(unsigned short)
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OffDelay::OffDelay(unsigned short)
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnDelay::OnDelay(unsigned short)
+<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pulse::Pulse(unsigned int)
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OffDelay::OffDelay(unsigned int)
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnDelay::OnDelay(unsigned int)
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreePosReg::ThreePosReg(float, float, float, unsigned short, unsigned short, bool)
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TwoPosTim::TwoPosTim(float, unsigned short, unsigned short, bool)
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned short)
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned int)
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor::Monitor(float, float)
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Ramp::Ramp(unsigned int, float, float, float, float)
 </UL>
 
-<P><STRONG><a name="[48]"></a>SimpleInput::isActive()</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, simple_input.o(.text._ZN11SimpleInput8isActiveEv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SimpleInput::isActive()
+<P><STRONG><a name="[48]"></a>SimpleInput::isActive()</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, simple_input.o(.text._ZN11SimpleInput8isActiveEv))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SimpleInput::isActive()
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleInputDelayed::update1ms()
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> simple_input.o(.rodata._ZTV11SimpleInput)
 </UL>
-<P><STRONG><a name="[e4]"></a>SimpleInput::SimpleInput(GPIO_TypeDef*, unsigned char)</STRONG> (Thumb, 146 bytes, Stack size 32 bytes, simple_input.o(.text._ZN11SimpleInputC2EP12GPIO_TypeDefh), UNUSED)
+<P><STRONG><a name="[e4]"></a>SimpleInput::SimpleInput(GPIO_TypeDef*, unsigned char)</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, simple_input.o(.text._ZN11SimpleInputC2EP12GPIO_TypeDefh), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ISwitch::ISwitch__sub_object()
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOcommon::GPIOcommon__sub_object(GPIO_TypeDef*, unsigned char)
 <LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;void setRegister&lang;unsigned int volatile&rang;(unsigned int volatile*, unsigned int, unsigned int)
 </UL>
 
-<P><STRONG><a name="[f8]"></a>SimpleInput::SimpleInput__sub_object(GPIO_TypeDef*, unsigned char)</STRONG> (Thumb, 146 bytes, Stack size 32 bytes, simple_input.o(.text._ZN11SimpleInputC2EP12GPIO_TypeDefh))
+<P><STRONG><a name="[f8]"></a>SimpleInput::SimpleInput__sub_object(GPIO_TypeDef*, unsigned char)</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, simple_input.o(.text._ZN11SimpleInputC2EP12GPIO_TypeDefh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SimpleInput::SimpleInput__sub_object(GPIO_TypeDef*, unsigned char)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleInputDelayed::SimpleInputDelayed(GPIO_TypeDef*, unsigned char, unsigned short)
@@ -1236,7 +1236,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IUpdated1ms::IUpdated1ms__sub_object()
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned int)
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned short)
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned int)
 <LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreePosReg::setPulseGist(float)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.10
@@ -1353,7 +1353,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = SimpleInputDelayed::SimpleInputDelayed(GPIO_TypeDef*, unsigned char, unsigned short) &rArr; SimpleInput::SimpleInput__sub_object(GPIO_TypeDef*, unsigned char)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleInput::SimpleInput__sub_object(GPIO_TypeDef*, unsigned char)
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer__sub_object(unsigned short)
+<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer__sub_object(unsigned int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.1
 </UL>
@@ -1503,17 +1503,17 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> pulse.o(.rodata._ZTV5Pulse)
 </UL>
-<P><STRONG><a name="[107]"></a>Pulse::Pulse(unsigned short)</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, pulse.o(.text._ZN5PulseC2Et))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Pulse::Pulse(unsigned short) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
+<P><STRONG><a name="[107]"></a>Pulse::Pulse(unsigned int)</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, pulse.o(.text._ZN5PulseC2Ej))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Pulse::Pulse(unsigned int) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IUpdated1ms::IUpdated1ms__sub_object()
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned int)
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned short)
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.13
 </UL>
 
-<P><STRONG><a name="[1be]"></a>Pulse::Pulse__sub_object(unsigned short)</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, pulse.o(.text._ZN5PulseC2Et), UNUSED)
+<P><STRONG><a name="[1be]"></a>Pulse::Pulse__sub_object(unsigned int)</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, pulse.o(.text._ZN5PulseC2Ej), UNUSED)
 
 <P><STRONG><a name="[3a]"></a>Pulse::~Pulse()</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, pulse.o(.text._ZN5PulseD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Pulse::~Pulse() &rArr; operator delete(void*, unsigned int) &rArr; operator delete(void*) &rArr; free
@@ -1865,7 +1865,7 @@ Global Symbols
 <P><STRONG><a name="[120]"></a>Monitor::Monitor(float, float)</STRONG> (Thumb, 174 bytes, Stack size 48 bytes, monitor.o(.text._ZN7MonitorC2Eff), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IUpdated1ms::IUpdated1ms__sub_object()
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned int)
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned short)
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned int)
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Monitor::setValueMax(float)
 </UL>
 
@@ -1890,17 +1890,17 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> on_delay.o(.rodata._ZTV7OnDelay)
 </UL>
-<P><STRONG><a name="[122]"></a>OnDelay::OnDelay(unsigned short)</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, on_delay.o(.text._ZN7OnDelayC2Et))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = OnDelay::OnDelay(unsigned short) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
+<P><STRONG><a name="[122]"></a>OnDelay::OnDelay(unsigned int)</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, on_delay.o(.text._ZN7OnDelayC2Ej))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = OnDelay::OnDelay(unsigned int) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IUpdated1ms::IUpdated1ms__sub_object()
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned int)
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned short)
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.11
 </UL>
 
-<P><STRONG><a name="[1c4]"></a>OnDelay::OnDelay__sub_object(unsigned short)</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, on_delay.o(.text._ZN7OnDelayC2Et), UNUSED)
+<P><STRONG><a name="[1c4]"></a>OnDelay::OnDelay__sub_object(unsigned int)</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, on_delay.o(.text._ZN7OnDelayC2Ej), UNUSED)
 
 <P><STRONG><a name="[38]"></a>OnDelay::~OnDelay()</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, on_delay.o(.text._ZN7OnDelayD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = OnDelay::~OnDelay() &rArr; operator delete(void*, unsigned int) &rArr; operator delete(void*) &rArr; free
@@ -1919,17 +1919,17 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> off_delay.o(.rodata._ZTV8OffDelay)
 </UL>
-<P><STRONG><a name="[123]"></a>OffDelay::OffDelay(unsigned short)</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, off_delay.o(.text._ZN8OffDelayC2Et))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = OffDelay::OffDelay(unsigned short) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
+<P><STRONG><a name="[123]"></a>OffDelay::OffDelay(unsigned int)</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, off_delay.o(.text._ZN8OffDelayC2Ej))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = OffDelay::OffDelay(unsigned int) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IUpdated1ms::IUpdated1ms__sub_object()
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned int)
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned short)
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.12
 </UL>
 
-<P><STRONG><a name="[1c6]"></a>OffDelay::OffDelay__sub_object(unsigned short)</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, off_delay.o(.text._ZN8OffDelayC2Et), UNUSED)
+<P><STRONG><a name="[1c6]"></a>OffDelay::OffDelay__sub_object(unsigned int)</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, off_delay.o(.text._ZN8OffDelayC2Ej), UNUSED)
 
 <P><STRONG><a name="[39]"></a>OffDelay::~OffDelay()</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, off_delay.o(.text._ZN8OffDelayD2Ev))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = OffDelay::~OffDelay() &rArr; operator delete(void*, unsigned int) &rArr; operator delete(void*) &rArr; free
@@ -2078,7 +2078,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IUpdated1ms::IUpdated1ms__sub_object()
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;operator new(unsigned int)
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned short)
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned int)
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TwoPosCommon::TwoPosCommon__sub_object(float, bool)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxx_global_var_init.9
@@ -2117,7 +2117,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_throw_bad_array_new_length
 </UL>
 
-<P><STRONG><a name="[4f]"></a>non-virtual thunk to SimpleInputDelayed::update1ms()</STRONG> (Thumb, 14 bytes, Stack size 4 bytes, simple_input.o(.text._ZThn12_N18SimpleInputDelayed9update1msEv))
+<P><STRONG><a name="[4f]"></a>non-virtual thunk to SimpleInputDelayed::update1ms()</STRONG> (Thumb, 14 bytes, Stack size 4 bytes, simple_input.o(.text._ZThn16_N18SimpleInputDelayed9update1msEv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = non-virtual thunk to SimpleInputDelayed::update1ms() &rArr; SimpleInputDelayed::update1ms() &rArr; CommonTimer::setStart(bool) &rArr; CommonTimer::stop() &rArr; CommonTimer::reset()
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleInputDelayed::update1ms()
@@ -2165,9 +2165,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;std::get_new_handler()
 </UL>
-<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pulse::Pulse(unsigned short)
-<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OffDelay::OffDelay(unsigned short)
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnDelay::OnDelay(unsigned short)
+<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pulse::Pulse(unsigned int)
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OffDelay::OffDelay(unsigned int)
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnDelay::OnDelay(unsigned int)
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ThreePosReg::ThreePosReg(float, float, float, unsigned short, unsigned short, bool)
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TwoPosTim::TwoPosTim(float, unsigned short, unsigned short, bool)
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AnalogOut::AnalogOut(unsigned short, unsigned int, float, float, float, float)
@@ -2768,9 +2768,9 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[94]"></a>__cxx_global_var_init.2</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, main.o(.text.__cxx_global_var_init.2))
-<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = __cxx_global_var_init.2 &rArr; CommonTimer::CommonTimer(unsigned short) &rArr; IUpdated1ms::IUpdated1ms__sub_object()
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = __cxx_global_var_init.2 &rArr; CommonTimer::CommonTimer(unsigned int) &rArr; IUpdated1ms::IUpdated1ms__sub_object()
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CommonTimer::CommonTimer(unsigned int)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
 </UL>
@@ -2846,27 +2846,27 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[9d]"></a>__cxx_global_var_init.11</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, main.o(.text.__cxx_global_var_init.11))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __cxx_global_var_init.11 &rArr; OnDelay::OnDelay(unsigned short) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __cxx_global_var_init.11 &rArr; OnDelay::OnDelay(unsigned int) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnDelay::OnDelay(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OnDelay::OnDelay(unsigned int)
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
 </UL>
 
 <P><STRONG><a name="[9e]"></a>__cxx_global_var_init.12</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, main.o(.text.__cxx_global_var_init.12))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __cxx_global_var_init.12 &rArr; OffDelay::OffDelay(unsigned short) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __cxx_global_var_init.12 &rArr; OffDelay::OffDelay(unsigned int) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OffDelay::OffDelay(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OffDelay::OffDelay(unsigned int)
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp
 </UL>
 
 <P><STRONG><a name="[9f]"></a>__cxx_global_var_init.13</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, main.o(.text.__cxx_global_var_init.13))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __cxx_global_var_init.13 &rArr; Pulse::Pulse(unsigned short) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = __cxx_global_var_init.13 &rArr; Pulse::Pulse(unsigned int) &rArr; operator new(unsigned int) &rArr; malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
 </UL>
-<BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pulse::Pulse(unsigned short)
+<BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pulse::Pulse(unsigned int)
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__cxa_atexit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GLOBAL__sub_I_main.cpp

@@ -1,6 +1,6 @@
 #include "pulse.h"
 
-Pulse::Pulse(uint16_t period){
+Pulse::Pulse(uint32_t period){
 	timer = new CommonTimer(period);
 }
 

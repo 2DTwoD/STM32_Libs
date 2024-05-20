@@ -8,7 +8,7 @@ class OffDelay: public IUpdated1ms {
 		bool startFlag;
 		CommonTimer *timer = nullptr;
 	public:
-		OffDelay(uint16_t period);
+		OffDelay(uint32_t period);
 		~OffDelay();
 		void update1ms() override;
 		void set(bool value);

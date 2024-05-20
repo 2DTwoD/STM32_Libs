@@ -5,17 +5,17 @@
 
 class CommonTimer: public IUpdated1ms {
 	protected:
-		uint16_t period;
-		uint16_t curTime;
+		uint32_t period;
+		uint32_t curTime;
 		bool go;
 		bool impulse;
 	public:
-		CommonTimer(uint16_t period);
+		CommonTimer(uint32_t period);
 		void update1ms() override;
-		uint16_t getPeriod();
-		void setPeriod(uint16_t value);
-		uint16_t getCurrentTime();
-		void setCurrentTime(uint16_t value);
+		uint32_t getPeriod();
+		void setPeriod(uint32_t value);
+		uint32_t getCurrentTime();
+		void setCurrentTime(uint32_t value);
 		void start();
 		void pause();
 		void stop();

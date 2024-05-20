@@ -7,7 +7,7 @@ class OnDelay: public IUpdated1ms {
 	private:
 		CommonTimer *timer = nullptr;
 	public:
-		OnDelay(uint16_t period);
+		OnDelay(uint32_t period);
 		~OnDelay();
 		void update1ms() override;
 		void set(bool value);

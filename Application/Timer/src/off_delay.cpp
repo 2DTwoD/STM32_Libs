@@ -1,6 +1,6 @@
 #include "off_delay.h"
 
-OffDelay::OffDelay(uint16_t period){
+OffDelay::OffDelay(uint32_t period){
 	timer = new CommonTimer(period);
 }
 

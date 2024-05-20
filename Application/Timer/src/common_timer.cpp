@@ -1,7 +1,7 @@
 #include "common_timer.h"
 
 //CommonDelay implementation
-CommonTimer::CommonTimer(uint16_t period){
+CommonTimer::CommonTimer(uint32_t period){
 	this->period = period;
 }
 void CommonTimer::update1ms(){
@@ -13,16 +13,16 @@ void CommonTimer::update1ms(){
 	impulse = false;
 	curTime = 0;
 }
-uint16_t CommonTimer::getPeriod(){
+uint32_t CommonTimer::getPeriod(){
 	return period;
 }
-void CommonTimer::setPeriod(uint16_t value){
+void CommonTimer::setPeriod(uint32_t value){
 	period = value;
 }
-uint16_t CommonTimer::getCurrentTime(){
+uint32_t CommonTimer::getCurrentTime(){
 	return curTime;
 }
-void CommonTimer::setCurrentTime(uint16_t value){
+void CommonTimer::setCurrentTime(uint32_t value){
 	curTime = value;
 }
 void CommonTimer::start(){

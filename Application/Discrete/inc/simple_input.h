@@ -6,12 +6,21 @@
 #include "gpio_common.h"
 #include "common_timer.h"
 
+#define SIM_ON
+
 //SimpleInput
 class SimpleInput: public GPIOcommon, public ISwitch{
+	#ifdef SIM_ON
+	private:
+		bool sim_on;
+		bool sim_val;
+	#endif
 	public:
 		SimpleInput(GPIO_TypeDef *gpio, uint8_t pin);
 	
 		bool isActive() override;
+	
+		bool isNotActive();
 };
 
 //SimpleInputDelayed (implements IUpdated1ms)
