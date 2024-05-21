@@ -5,11 +5,12 @@ extern AnalogMonitor adcMonitor;
 extern Scale<float, int16_t> scale;
 extern MovAvg avg;
 extern Ramp ramp;
-extern Pulse pulse;
+extern ShortPulse pulse;
 extern AnalogOut analogOut;
 RFimpulse rise(FALL);
-uint8_t step = 0;
-Sequence seq(&step, 0);
+extern uint8_t step;
+extern Sequence seq1;
+extern SequenceDelayed seq2;
 bool strt;
 bool rest;
 bool reslt;
@@ -37,10 +38,12 @@ void testTask(void *pvParameters){
 		}
 		reslt = pulse.get();
 		//threePosReg = avg.get();
-		seq.start(seq_start);
-		seq.lock(seq_lock);
-		seq.finish(seq_finish);
-		if(seq.finishedImpulse()){
+		seq1.start(seq_start);
+		seq1.lock(seq_lock);
+		seq1.finish(seq_finish);
+		seq2.start(seq_start);
+		seq2.lock(seq_lock);
+		if(seq2.finished()){
 			int tmp = 0;
 		}
 		vTaskDelay(1);

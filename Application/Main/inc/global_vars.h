@@ -17,11 +17,12 @@
 #include "off_delay.h"
 #include "pulse.h"
 #include "counter.h"
+#include "sequence.h"
 
 Coil led(GPIOC, 13);
 SimpleInputDelayed button(GPIOA, 0, 10);
 
-CommonTimer delay(10);
+OnDelay delay(10);
 
 volatile uint16_t adcValues[2] = {0, 0};
 AnalogMonitor adcMonitor(12, 0, 100);
@@ -34,8 +35,11 @@ TwoPosTim twoPos(50.0f, 5000, 1000);
 ThreePosReg threePosReg(50.0f, 5.0f, 15.0f, 1000, 1000);
 OnDelay onDelay(5000);
 OffDelay offDelay(5000);
-Pulse pulse(5000);
+ShortPulse pulse(5000);
 Counter counter(RISE_FALL, 100);
+uint8_t step = 0;
+Sequence seq1(&step, 0);
+SequenceDelayed seq2(&step, 1, 5000);
 
 IUpdated1ms *updateObjects[] = {
 	&delay,
@@ -47,7 +51,8 @@ IUpdated1ms *updateObjects[] = {
 	&button,
 	&onDelay,
 	&offDelay,
-	&pulse
+	&pulse,
+	&seq2
 };
 
 uint8_t updateObjectsSize = sizeof(updateObjects) / sizeof(*updateObjects);

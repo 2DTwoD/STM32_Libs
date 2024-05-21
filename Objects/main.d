@@ -38,5 +38,5 @@
   Application\Discrete\inc\switch_delay.h \
   Application\Timer\inc\on_delay.h Application\Timer\inc\off_delay.h \
   Application\Timer\inc\pulse.h Application\Observe\inc\counter.h \
-  Application\Discrete\inc\rf_impulse.h Tasks\Inc\all_tasks.h \
-  Application\Control\inc\sequence.h
+  Application\Discrete\inc\rf_impulse.h \
+  Application\Control\inc\sequence.h Tasks\Inc\all_tasks.h

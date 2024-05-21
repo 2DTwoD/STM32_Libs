@@ -86,8 +86,8 @@ uint16_t TwoPosTim::getHighTime(){
 void TwoPosTim::update1ms(){
 	lowTimer->setStart(in < sp);
 	highTimer->setStart(in > sp);
-	lowTimer->update1ms();
-	highTimer->update1ms();
+	lowTimer->update();
+	highTimer->update();
 	if(lowTimer->finished()){
 		out = !reverse;
 	} else if (highTimer->finished()){

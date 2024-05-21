@@ -1,8 +1,8 @@
 #include "three_pos.h"
 ThreePosReg::ThreePosReg(float sp, float zeroGist, float pulseGist, uint16_t pauseTime, uint16_t pulseTime, bool reverse): sp(sp), zeroGist(zeroGist), reverse(reverse){
-		pauseTimer = new CommonTimer(pauseTime);
-		pulseTimer = new CommonTimer(pulseTime);
-		setPulseGist(pulseGist);
+	pauseTimer = new CommonTimer(pauseTime);
+	pulseTimer = new CommonTimer(pulseTime);
+	setPulseGist(pulseGist);
 }
 ThreePosReg::~ThreePosReg(){
 	delete pauseTimer;
@@ -75,8 +75,8 @@ void ThreePosReg::update1ms(){
 	}
 	*pulseTimer = pauseTimer->finished();
 	
-	pauseTimer->update1ms();
-	pulseTimer->update1ms();
+	pauseTimer->update();
+	pulseTimer->update();
 	
 	if(impulseCycleEnded() || halfImpulseCycleEnded()){
 		startTimer = false;

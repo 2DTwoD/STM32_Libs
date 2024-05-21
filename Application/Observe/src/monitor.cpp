@@ -26,7 +26,7 @@ void Monitor::update1ms(){
 	*tresDelays[2] = in * 100 / range >= tresholds[LH];
 	*tresDelays[3] = in * 100 / range >= tresholds[HH];
 	for(int i = 0; i < 4; i++){
-		tresDelays[i]->update1ms();
+		tresDelays[i]->update();
 	}
 }
 float Monitor::get(){

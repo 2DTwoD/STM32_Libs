@@ -30,8 +30,8 @@ bool SimpleInput::isNotActive(){
 SimpleInputDelayed::SimpleInputDelayed(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): SimpleInput(gpio, pin), CommonTimer(delay){
 }
 void SimpleInputDelayed::update1ms(){
-	setStart(SimpleInput::isActive());
-	CommonTimer::update1ms();
+	CommonTimer::setStart(SimpleInput::isActive());
+	CommonTimer::update();
 }
 bool SimpleInputDelayed::isActive(){
 	return finished();
