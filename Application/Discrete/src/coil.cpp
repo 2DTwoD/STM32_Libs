@@ -44,36 +44,45 @@ Coil& Coil::operator=(bool value){
 	return *this;
 }
 
-//CoilDelayed
-CoilDelayed::CoilDelayed(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): Coil(gpio, pin), CommonTimer(delay) {
+//CoilOnDelayed
+CoilOnDelay::CoilOnDelay(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): Coil(gpio, pin), OnDelayCommon(delay) {
 }
-void CoilDelayed::update1ms() {
-	CommonTimer::update();
-	Coil::setValue(CommonTimer::finished());
+void CoilOnDelay::update1ms() {
+	OnDelayCommon::update();
+	Coil::setValue(OnDelayCommon::get());
 }
-bool CoilDelayed::isActive(){
-	return Coil::isActive();
+void CoilOnDelay::setValue(bool value){
+	OnDelayCommon::set(value);
 }
-void CoilDelayed::setValue(bool value){
-	CommonTimer::setStart(value);
+CoilOnDelay& CoilOnDelay::operator=(bool value){
+	setValue(value);
+	return *this;
 }
-CoilDelayed& CoilDelayed::operator=(bool value){
+
+//CoilOffDelayed
+CoilOffDelay::CoilOffDelay(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): Coil(gpio, pin), OffDelayCommon(delay) {
+}
+void CoilOffDelay::update1ms() {
+	OffDelayCommon::update();
+	Coil::setValue(OffDelayCommon::get());
+}
+void CoilOffDelay::setValue(bool value){
+	OffDelayCommon::set(value);
+}
+CoilOffDelay& CoilOffDelay::operator=(bool value){
 	setValue(value);
 	return *this;
 }
 
 //CoilPulse
-CoilPulse::CoilPulse(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): Coil(gpio, pin), CommonTimer(delay) {
+CoilPulse::CoilPulse(GPIO_TypeDef *gpio, uint8_t pin, uint16_t delay): Coil(gpio, pin), PulseCommon(delay) {
 }
 void CoilPulse::update1ms() {
-	CommonTimer::update();
-	Coil::setValue(CommonTimer::inWork());
-}
-bool CoilPulse::isActive(){
-	return Coil::isActive();
+	PulseCommon::update();
+	Coil::setValue(PulseCommon::get());
 }
 void CoilPulse::setValue(bool value){
-	CommonTimer::setStart(value);
+	PulseCommon::set(value);
 }
 CoilPulse& CoilPulse::operator=(bool value){
 	setValue(value);

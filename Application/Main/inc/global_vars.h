@@ -19,7 +19,7 @@
 #include "counter.h"
 #include "sequence.h"
 
-Coil led(GPIOC, 13);
+CoilOffDelay led(GPIOC, 13, 1000);
 SimpleInputDelayed button(GPIOA, 0, 10);
 
 OnDelay delay(10);
@@ -35,7 +35,7 @@ TwoPosTim twoPos(50.0f, 5000, 1000);
 ThreePosReg threePosReg(50.0f, 5.0f, 15.0f, 1000, 1000);
 OnDelay onDelay(5000);
 OffDelay offDelay(5000);
-ShortPulse pulse(5000);
+Pulse pulse(5000);
 Counter counter(RISE_FALL, 100);
 uint8_t step = 0;
 Sequence seq1(&step, 0);
@@ -52,7 +52,8 @@ IUpdated1ms *updateObjects[] = {
 	&onDelay,
 	&offDelay,
 	&pulse,
-	&seq2
+	&seq2,
+	&led
 };
 
 uint8_t updateObjectsSize = sizeof(updateObjects) / sizeof(*updateObjects);
