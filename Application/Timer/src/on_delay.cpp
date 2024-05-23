@@ -9,6 +9,9 @@ void OnDelayCommon::update(){
 void OnDelayCommon::set(bool value){
 	CommonTimer::setStart(value);
 }
+void OnDelayCommon::setPause(bool value){
+	CommonTimer::setPause(value);
+}
 bool OnDelayCommon::get(){
 	return CommonTimer::finished();
 }
@@ -24,5 +27,9 @@ void OnDelay::update1ms(){
 }
 OnDelay& OnDelay::operator=(bool value){
 	set(value);
+	return *this;
+}
+OnDelay& OnDelay::operator+=(bool value){
+	setPause(value);
 	return *this;
 }

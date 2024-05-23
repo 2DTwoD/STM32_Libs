@@ -22,6 +22,7 @@
   Application\Misc\inc\common.h Application\Timer\inc\common_timer.h \
   Application\Misc\inc\interfaces.h Application\Main\inc\global_vars.h \
   Application\Discrete\inc\coil.h Application\Discrete\inc\gpio_common.h \
+  Application\Discrete\inc\coil_with_timer.h \
   Application\Timer\inc\on_delay.h Application\Timer\inc\off_delay.h \
   Application\Timer\inc\pulse.h Application\Discrete\inc\simple_input.h \
   Application\Analog\inc\analog_monitor.h \

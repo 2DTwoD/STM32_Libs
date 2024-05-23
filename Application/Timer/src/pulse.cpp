@@ -43,6 +43,9 @@ Pulse& Pulse::operator=(bool value){
 //PulseInterrapt
 PulseInterrapt::PulseInterrapt(uint32_t period): PulseCommon(period){
 }
+void PulseInterrapt::update1ms(){
+	PulseCommon::update();
+}
 void PulseInterrapt::set(bool value){
 	PulseCommon::set(value);
 	if(!value) {

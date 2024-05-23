@@ -6,6 +6,7 @@
 #include "task.h"
 
 #include "coil.h"
+#include "coil_with_timer.h"
 #include "simple_input.h"
 #include "counter.h"
 #include "pid.h"

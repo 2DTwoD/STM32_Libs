@@ -555,6 +555,16 @@
               <FilePath>.\Application\Discrete\inc\coil.h</FilePath>
             </File>
             <File>
+              <FileName>coil_with_timer.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Application\Discrete\src\coil_with_timer.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>coil_with_timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Application\Discrete\inc\coil_with_timer.h</FilePath>
+            </File>
+            <File>
               <FileName>gpio_common.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>.\Application\Discrete\src\gpio_common.cpp</FilePath>

@@ -8,16 +8,17 @@ class Sequence: private RFimpulse{
 		bool strt;
 		bool lck;
 		bool fin;
-		uint8_t seq_step;
+		const uint8_t seq_step;
 		uint8_t *cur_step_pointer;
 		bool isMyStep();
 	public:
-		Sequence(uint8_t *cur_step_pointer, uint8_t seq_step);
+		Sequence(uint8_t *const cur_step_pointer, uint8_t seq_step);
 		void reset();
 		void start(bool value);
 		void lock(bool value);
 		void finish(bool value);
 		void slfSet(bool strt, bool lck, bool fin);
+		bool active();
 		bool started();
 		bool locked();
 		bool finished();
@@ -26,11 +27,12 @@ class Sequence: private RFimpulse{
 
 class SequenceDelayed: private CommonTimer, public Sequence, public IUpdated1ms{
 	public:
-		SequenceDelayed(uint8_t *cur_step_pointer, uint8_t seq_step, uint32_t delay);
+		SequenceDelayed(uint8_t *const cur_step_pointer, uint8_t seq_step, uint32_t delay);
 		void update1ms() override;
 		using Sequence::reset;
 		using Sequence::start;
 		using Sequence::finish;
+		using Sequence::active;
 		using Sequence::started;
 		using Sequence::locked;
 		using Sequence::finished;

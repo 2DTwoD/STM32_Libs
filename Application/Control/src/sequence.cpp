@@ -1,7 +1,7 @@
 #include "sequence.h"
 
 //Sequence
-Sequence::Sequence(uint8_t *cur_step_pointer, uint8_t seq_step): RFimpulse(RISE), cur_step_pointer(cur_step_pointer), seq_step(seq_step){
+Sequence::Sequence(uint8_t *const cur_step_pointer, uint8_t seq_step): RFimpulse(RISE), cur_step_pointer(cur_step_pointer), seq_step(seq_step){
 }
 bool Sequence::isMyStep(){
 	return *cur_step_pointer == seq_step;
@@ -35,8 +35,11 @@ void Sequence::slfSet(bool strt, bool lck, bool fin){
 	lock(lck);
 	finish(fin);
 }
+bool Sequence::active(){
+	return started() && !locked() && !finished();
+}
 bool Sequence::started(){
-	return strt && !lck;
+	return strt;
 }
 bool Sequence::locked(){
 	return lck;
@@ -49,13 +52,13 @@ bool Sequence::finishedImpulse(){
 }
 
 //SequenceDelayed
-SequenceDelayed::SequenceDelayed(uint8_t *cur_step_pointer, uint8_t seq_step, uint32_t delay): Sequence(cur_step_pointer, seq_step), CommonTimer(delay){
+SequenceDelayed::SequenceDelayed(uint8_t *const cur_step_pointer, uint8_t seq_step, uint32_t delay): Sequence(cur_step_pointer, seq_step), CommonTimer(delay){
 }
 void SequenceDelayed::update1ms(){
 	if(Sequence::locked()){
 		return;
 	}
-	CommonTimer::setStart(Sequence::started());
+	CommonTimer::setStart(Sequence::active());
 	CommonTimer::update();
 	Sequence::finish(CommonTimer::finished());
 }

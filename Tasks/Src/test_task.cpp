@@ -5,7 +5,7 @@ extern AnalogMonitor adcMonitor;
 extern Scale<float, int16_t> scale;
 extern MovAvg avg;
 extern Ramp ramp;
-extern Pulse pulse;
+extern PulseInterrapt pulse;
 extern AnalogOut analogOut;
 RFimpulse rise(FALL);
 extern uint8_t step;

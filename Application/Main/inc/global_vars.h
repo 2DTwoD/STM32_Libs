@@ -2,6 +2,7 @@
 #define GLOBAL_VARS_H
 
 #include "coil.h"
+#include "coil_with_timer.h"
 #include "common_timer.h"
 #include "simple_input.h"
 #include "analog_monitor.h"
@@ -35,7 +36,7 @@ TwoPosTim twoPos(50.0f, 5000, 1000);
 ThreePosReg threePosReg(50.0f, 5.0f, 15.0f, 1000, 1000);
 OnDelay onDelay(5000);
 OffDelay offDelay(5000);
-Pulse pulse(5000);
+PulseInterrapt pulse(5000);
 Counter counter(RISE_FALL, 100);
 uint8_t step = 0;
 Sequence seq1(&step, 0);
